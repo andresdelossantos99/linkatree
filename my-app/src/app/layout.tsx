@@ -4,6 +4,7 @@ import {
   Playfair_Display,
   Source_Sans_3 as Source_Sans_Pro,
 } from "next/font/google";
+// @ts-expect-error Next.js processes this global stylesheet at runtime.
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -33,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${playfair.variable} ${sourceSans.variable} antialiased`}
     >
       <body>{children}</body>
